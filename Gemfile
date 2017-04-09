@@ -18,6 +18,11 @@ gem "bootstrap-sass", "~> 3.3.6"
 gem "font-awesome-rails"
 gem "bootstrap-glyphicons"
 gem "material_icons"
+gem "cancancan"
+gem "carrierwave"
+gem "mini_magick"
+gem "config"
+gem "rails-bootstrap-toggle-buttons"
 
 group :development, :test do
   gem "pry-rails"

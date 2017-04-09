@@ -1,0 +1,18 @@
+$(document).ready(function() {
+  $(".toggle-button").toggleButtons();
+
+  $(".switch-button").change(function() {
+    // console.log($(this).is(":checked"));
+    let form = $(this).closest("form");
+    let path = form.attr("action");
+    let message = $("#response-message");
+    message.html("");
+    let update = $.post(path, form.serialize, null, "script");
+    update.success(function() {
+      message.html("Đã lưu!");
+    });
+    update.error(function() {
+      message.html("Có lỗi xảy ra, vui lòng thử lại!");
+    });
+  });
+});
